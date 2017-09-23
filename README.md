@@ -11,17 +11,21 @@ A Football competitions control application for elementary OS
 ## How to install
 Grab a copy [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**  
 
-``bash
+```bash
 git clone https://github.com/mirkobrombin/Football.git  
 cd Football  
-sudo make install``
+sudo make install
+```
 
 ## How to run
-``bash
-com.github.mirkobrombin.Football``
+```bash
+com.github.mirkobrombin.Football
+```
 
 ## How to run (without install)
-``bash
+
+```bash
 sudo apt install elementary-sdk
 cd src
-python3 main.py``
+python3 main.py
+```
