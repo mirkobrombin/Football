@@ -15,6 +15,8 @@ python3 main.py``
 
 ## How to build
 Grab a copy [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**  
-``git clone https://github.com/mirkobrombin/Football.git  
+
+```bash
+git clone https://github.com/mirkobrombin/Football.git  
 cd Football  
-sudo make install``
+sudo make install```
