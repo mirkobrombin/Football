@@ -14,7 +14,7 @@ python3 main.py``
 - libgranite-dev
 
 ## How to build
-Grab a copy [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**
-``git clone https://github.com/mirkobrombin/Football.git
-cd Football
+Grab a copy [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**  
+``git clone https://github.com/mirkobrombin/Football.git  
+cd Football  
 sudo make install``
