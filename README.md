@@ -25,7 +25,7 @@ com.github.mirkobrombin.Football
 ## How to run (without install)
 
 ```bash
-sudo apt install elementary-sdk
+sudo apt install python3 libgtk-3-dev libgranite-dev 
 cd src
 python3 main.py
 ```
