@@ -4,7 +4,7 @@ An application for tracking Football scores, designed for elementary OS.
 ![Screenshot](screenshot.png)
 
 ## Requirements
-- python3 (you can also run this program on python2.x, installing **requests** from **pip**)
+- python3 (you can also run this program on python2.x, installing **python-requests**)
 - libgtk-3-dev
 - libgranite-dev
 
