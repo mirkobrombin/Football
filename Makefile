@@ -1,7 +1,4 @@
-all: dependecies install uninstall
-
-dependecies:
-	pip install requests
+all: install uninstall
 
 install:
 	cp src/main.py /bin/com.github.mirkobrombin.football
