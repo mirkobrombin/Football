@@ -4,7 +4,7 @@ import glob, os
 from distutils.core import setup
 
 install_data = [('share/applications', ['data/com.github.mirkobrombin.football.desktop']),
-                ('share/metainfo', ['data/com.github.mirkobrombin.football.appdata.xml']),
+                ('share/metainfo', ['data/com.github.mirkobrombin.football.xml']),
                 ('share/icons/hicolor/128x128/apps',['data/com.github.mirkobrombin.football.svg'])]
 
 setup(  name='Football',
