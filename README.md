@@ -1,5 +1,5 @@
 # Football
-A Football competitions control application for elementary OS
+An application for tracking Football scores, designed for elementary OS.
 
 ![Screenshot](screenshot.png)
 
