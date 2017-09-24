@@ -6,6 +6,7 @@ Build-Depends: make (>= 2.8),
                debhelper (>= 9),
                libgtk-3-dev,
                libgranite-dev,
+               python-requests,
                debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
 
