@@ -10,14 +10,13 @@ An application for tracking Football scores, designed for elementary OS.
 
 
 ## How to run
+
 ```bash
 com.github.mirkobrombin.football
 ```
 
-## How to ru
+## How to install
 
 ```bash
-sudo apt install python3 libgtk-3-dev libgranite-dev 
-cd football
-python3 main.py
+python3 setup.py
 ```
