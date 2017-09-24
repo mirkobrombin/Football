@@ -16,7 +16,10 @@ com.github.mirkobrombin.football
 ```
 
 ## How to install
+Grab an updated release (here)[https://github.com/mirkobrombin/Football/archive/master.zip] or use **git**:
 
 ```bash
+git clone https://github.com/mirkobrombin/Football.git
+cd Football
 sudo python3 setup.py install
 ```
