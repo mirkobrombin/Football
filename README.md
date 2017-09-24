@@ -8,24 +8,16 @@ An application for tracking Football scores, designed for elementary OS.
 - libgtk-3-dev
 - libgranite-dev
 
-## How to install
-Grab a copy [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**  
-
-```bash
-git clone https://github.com/mirkobrombin/Football.git  
-cd Football  
-sudo make install
-```
 
 ## How to run
 ```bash
 com.github.mirkobrombin.football
 ```
 
-## How to run (without install)
+## How to ru
 
 ```bash
 sudo apt install python3 libgtk-3-dev libgranite-dev 
-cd src
+cd football
 python3 main.py
 ```

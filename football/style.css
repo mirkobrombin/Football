@@ -1,0 +1,10 @@
+@define-color bg_color1 rgb (239, 64, 89);
+@define-color bg_color2 rgb (229, 49, 75);
+
+.FootballHeader {
+    /*background-image: -gtk-gradient (linear,
+        	                         center top,
+                	                 center bottom,
+                        	         from(@bg_color1),
+                                	 to(@bg_color2));*/
+}
