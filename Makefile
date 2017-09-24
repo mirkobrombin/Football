@@ -1,4 +1,9 @@
-all: install uninstall
+all: dependecies install uninstall
+
+dependecies:
+	apt install libgtk-3-dev
+	apt install libgranite-dev
+	apt install python3
 
 install:
 	cp src/main.py /bin/com.github.mirkobrombin.football
