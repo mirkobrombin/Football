@@ -1,9 +1,7 @@
 all: dependecies install uninstall
 
 dependecies:
-	apt install libgtk-3-dev
-	apt install libgranite-dev
-	apt install python-requests
+	pip install requests
 
 install:
 	cp src/main.py /bin/com.github.mirkobrombin.football
