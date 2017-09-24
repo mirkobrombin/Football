@@ -18,5 +18,5 @@ com.github.mirkobrombin.football
 ## How to install
 
 ```bash
-python3 setup.py
+sudo python3 setup.py install
 ```
