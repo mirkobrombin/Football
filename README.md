@@ -19,7 +19,7 @@ sudo make install
 
 ## How to run
 ```bash
-com.github.mirkobrombin.Football
+com.github.mirkobrombin.football
 ```
 
 ## How to run (without install)
