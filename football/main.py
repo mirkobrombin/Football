@@ -23,9 +23,8 @@ import sys
 import json
 import requests
 from datetime import datetime
-gi.require_version('Granite', '1.0')
 gi.require_version('Gtk', '3.0')
-from gi.repository import Granite, Gtk, Gdk
+from gi.repository import Gtk, Gdk
 
 API_KEY = "cb3a6fe9d9284af79a13661ff6191ea6"
 headers = {'X-Auth-Token':API_KEY, 'X-Response-Control': 'minified'}
