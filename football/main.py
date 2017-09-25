@@ -97,6 +97,7 @@ class Football(Gtk.Window):
         print("N of fixtures: " + str(self.fixtures_obj['count']))
         self.fixtures_list = []
         for f in self.fixtures_obj['fixtures']:
+            print(f)
             match_date = datetime.strptime(f['date'], '%Y-%m-%dT%H:%M:%SZ')
             if str(f['result']['goalsHomeTeam']) == "None":
                 match_results = "n/a"
@@ -111,6 +112,7 @@ class Football(Gtk.Window):
             try:
                 self.fixtures_list.append((
                     f['homeTeamName'], 
+                    f['matchday'],
                     match_results, 
                     f['awayTeamName'], match_status, match_date.strftime('%Y %B %d %H:%M')))
             except(KeyError):
@@ -118,7 +120,7 @@ class Football(Gtk.Window):
 
         #fixtures selector
         if update == False:
-            self.fixtures_liststore = Gtk.ListStore(str, str, str, str, str)
+            self.fixtures_liststore = Gtk.ListStore(str, int, str, str, str, str)
         else:
             self.fixtures_liststore.clear()
         for fixtures in self.fixtures_list:
@@ -126,10 +128,12 @@ class Football(Gtk.Window):
         self.fixtures_sorted = Gtk.TreeModelSort(model=self.fixtures_liststore)
         self.fixtures_sorted.set_sort_column_id(1, Gtk.SortType.ASCENDING)
         self.treeview = Gtk.TreeView.new_with_model(self.fixtures_sorted)
-        for i, column_title in enumerate(["Home team", "Results", "Away team", "Status", "Date"]):
+        for i, column_title in enumerate(["Home team", "Day", "Results", "Away team", "Status", "Date"]):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, renderer, text=i)
-            column.set_sort_column_id(0)
+            column.set_reorderable(True)
+            column.set_resizable(True)
+            column.set_sort_column_id(i)
             self.treeview.append_column(column)
     
     def on_competitions_combo_changed(self, combo):
@@ -144,7 +148,7 @@ class Football(Gtk.Window):
             print("Entered: %s" % entry.get_text())
 
 win = Football()
-win.set_default_size(840, 600) 
+win.set_default_size(900, 680) 
 win.connect("delete-event", Gtk.main_quit)
 '''style_provider = Gtk.CssProvider()
 style_provider.load_from_path("./style.css")
