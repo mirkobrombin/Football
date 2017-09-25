@@ -28,6 +28,11 @@ from gi.repository import Gtk, Gdk
 
 API_KEY = "cb3a6fe9d9284af79a13661ff6191ea6"
 headers = {'X-Auth-Token':API_KEY, 'X-Response-Control': 'minified'}
+stylesheet = """
+    @define-color colorPrimary #249C5F;
+    @define-color textColorPrimary #f2f2f2;
+    @define-color textColorPrimaryShadow #197949;
+""";
 
 class Football(Gtk.Window):
 
@@ -145,16 +150,14 @@ class Football(Gtk.Window):
             entry = combo.get_child()
             print("Entered: %s" % entry.get_text())
 
+style_provider = Gtk.CssProvider()
+style_provider.load_from_data(bytes(stylesheet.encode()))
+Gtk.StyleContext.add_provider_for_screen(
+    Gdk.Screen.get_default(), style_provider,
+    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+)
 win = Football()
 win.set_default_size(900, 680) 
 win.connect("delete-event", Gtk.main_quit)
-'''style_provider = Gtk.CssProvider()
-style_provider.load_from_path("./style.css")
- 
-Gtk.StyleContext.add_provider_for_screen(
-    Gdk.Screen.get_default(),
-    style_provider,
-    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-)'''
 win.show_all()
 Gtk.main()
