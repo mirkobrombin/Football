@@ -6,7 +6,8 @@ from distutils.core import setup
 install_data = [('share/applications', ['data/com.github.mirkobrombin.football.desktop']),
                 ('share/metainfo', ['data/com.github.mirkobrombin.football.appdata.xml']),
                 ('share/icons/hicolor/128x128/apps',['data/com.github.mirkobrombin.football.svg']),
-                ('bin/football',['football/main.py'])]
+                ('bin/football',['football/main.py']),
+                ('bin/football',['football/__init__.py'])]
 
 setup(  name='Football',
         version='0.1',
