@@ -22,6 +22,7 @@ import gi
 import sys
 import json
 import requests
+from datetime import datetime
 gi.require_version('Granite', '1.0')
 gi.require_version('Gtk', '3.0')
 from gi.repository import Granite, Gtk, Gdk
@@ -96,11 +97,22 @@ class Football(Gtk.Window):
         print("N of fixtures: " + str(self.fixtures_obj['count']))
         self.fixtures_list = []
         for f in self.fixtures_obj['fixtures']:
+            match_date = datetime.strptime(f['date'], '%Y-%m-%dT%H:%M:%SZ')
+            if str(f['result']['goalsHomeTeam']) == "None":
+                match_results = "n/a"
+            else:
+                match_results = str(f['result']['goalsHomeTeam'])+" - "+str(f['result']['goalsAwayTeam'])
+            if f['status'] == "FINISHED":
+                match_status = "Finished"
+            elif f['status'] == "TIMED":
+                match_status = "Timed"
+            elif f['status'] == "SCHEDULED":
+                match_status = "Programmed"
             try:
                 self.fixtures_list.append((
                     f['homeTeamName'], 
-                    str(f['result']['goalsHomeTeam'])+" - "+str(f['result']['goalsAwayTeam']), 
-                    f['awayTeamName'], f['date'], f['status']))
+                    match_results, 
+                    f['awayTeamName'], match_status, match_date.strftime('%Y %B %d %H:%M')))
             except(KeyError):
                 print("Error for JSON: " + str(f))
 
@@ -111,11 +123,13 @@ class Football(Gtk.Window):
             self.fixtures_liststore.clear()
         for fixtures in self.fixtures_list:
             self.fixtures_liststore.append(list(fixtures))
-        self.fixtures_filter = self.fixtures_liststore.filter_new()
-        self.treeview = Gtk.TreeView.new_with_model(self.fixtures_filter)
-        for i, column_title in enumerate(["Home team", "Results", "Away team", "Date", "Status"]):
+        self.fixtures_sorted = Gtk.TreeModelSort(model=self.fixtures_liststore)
+        self.fixtures_sorted.set_sort_column_id(1, Gtk.SortType.ASCENDING)
+        self.treeview = Gtk.TreeView.new_with_model(self.fixtures_sorted)
+        for i, column_title in enumerate(["Home team", "Results", "Away team", "Status", "Date"]):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, renderer, text=i)
+            column.set_sort_column_id(0)
             self.treeview.append_column(column)
     
     def on_competitions_combo_changed(self, combo):
@@ -130,7 +144,7 @@ class Football(Gtk.Window):
             print("Entered: %s" % entry.get_text())
 
 win = Football()
-win.set_default_size(820, 600) 
+win.set_default_size(840, 600) 
 win.connect("delete-event", Gtk.main_quit)
 '''style_provider = Gtk.CssProvider()
 style_provider.load_from_path("./style.css")
