@@ -97,7 +97,6 @@ class Football(Gtk.Window):
         print("N of fixtures: " + str(self.fixtures_obj['count']))
         self.fixtures_list = []
         for f in self.fixtures_obj['fixtures']:
-            print(f)
             match_date = datetime.strptime(f['date'], '%Y-%m-%dT%H:%M:%SZ')
             if str(f['result']['goalsHomeTeam']) == "None":
                 match_results = "n/a"
