@@ -2,7 +2,7 @@
 Name=Football
 GenericName=Football
 Comment=Check Football competitions status
-Categories=Education;
+Categories=Other;
 Exec=com.github.mirkobrombin.football
 Icon=com.github.mirkobrombin.football
 Terminal=false
