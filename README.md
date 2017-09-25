@@ -8,7 +8,6 @@ An application for tracking Football scores, designed for elementary OS.
 - python3
 - libgtk-3-dev
 
-
 ## How to run
 
 ```bash
@@ -16,6 +15,14 @@ com.github.mirkobrombin.football
 ```
 
 ## How to install
+
+Grab an updated debian package [here](https://github.com/mirkobrombin/Football/releases)
+
+```bash
+dpkg -i com.github.mirkobrombin.football*.deb
+```
+
+### How to install (from source)
 
 Grab an updated release [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**:
 
