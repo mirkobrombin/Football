@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import glob, os 
 from distutils.core import setup
@@ -10,7 +10,7 @@ install_data = [('share/applications', ['data/com.github.mirkobrombin.football.d
                 ('bin/football',['football/__init__.py'])]
 
 setup(  name='Football',
-        version='0.1',
+        version='1.0.4',
         author='Mirko Brombin',
         description='Track Football scores',
         url='https://github.com/mirkobrombin/football',
