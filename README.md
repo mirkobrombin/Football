@@ -14,7 +14,13 @@ An application for tracking Football scores, designed for elementary OS.
 com.github.mirkobrombin.football
 ```
 
-## How to install
+## Installation
+
+### For elementary OS
+
+<a href="https://appcenter.elementary.io/com.github.mirkobrombin.football"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on the AppCenter"></a>
+
+### For Debian based
 
 Grab an updated debian package [here](https://github.com/mirkobrombin/Football/releases)
 
@@ -22,7 +28,7 @@ Grab an updated debian package [here](https://github.com/mirkobrombin/Football/r
 dpkg -i com.github.mirkobrombin.football*.deb
 ```
 
-### How to install (from source)
+### Install from source
 
 Grab an updated release [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**:
 
