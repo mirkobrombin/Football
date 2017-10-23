@@ -22,7 +22,7 @@ import gi
 import sys
 import json
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk
 
@@ -40,6 +40,8 @@ class Football(Gtk.Window):
         Gtk.Window.__init__(self, title="Football")
         
         self.header_bar()
+
+        self.show_latest = False
 
         #grid
         self.grid = Gtk.Grid()
@@ -64,6 +66,13 @@ class Football(Gtk.Window):
         self.hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         self.hbox.add(self.competitions_combo)
         self.hbar.pack_start(self.hbox)
+
+        # last
+        self.last = Gtk.Button("Last played")
+        self.last = Gtk.Button.new_from_icon_name("document-open-recent", Gtk.IconSize.LARGE_TOOLBAR)
+        self.last.connect("clicked", self.on_last_clicked)
+        self.last.set_property("tooltip-text", "Last 7 days")
+        self.hbar.pack_end(self.last)
 
     def header_bar(self):
         self.hbar = Gtk.HeaderBar()
@@ -124,13 +133,15 @@ class Football(Gtk.Window):
         #fixtures selector
         if update == False:
             self.fixtures_liststore = Gtk.ListStore(str, int, str, str, str, str)
+            self.last_filter = self.fixtures_liststore.filter_new()
+            self.last_filter.set_visible_func(self.set_last_filter)
         else:
             self.fixtures_liststore.clear()
         for fixtures in self.fixtures_list:
             self.fixtures_liststore.append(list(fixtures))
         self.fixtures_sorted = Gtk.TreeModelSort(model=self.fixtures_liststore)
         self.fixtures_sorted.set_sort_column_id(1, Gtk.SortType.ASCENDING)
-        self.treeview = Gtk.TreeView.new_with_model(self.fixtures_sorted)
+        self.treeview = Gtk.TreeView.new_with_model(self.last_filter)
         for i, column_title in enumerate(["Home team", "Day", "Results", "Away team", "Status", "Date"]):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, renderer, text=i)
@@ -149,6 +160,24 @@ class Football(Gtk.Window):
         else:
             entry = combo.get_child()
             print("Entered: %s" % entry.get_text())
+
+    def set_last_filter(self, model, iter, data):
+        if self.show_latest == True:
+            today = datetime.now()
+            latest = today - timedelta(days=7) # Last 7 days
+            col_date = datetime.strptime(model[iter][5], '%Y %B %d %H:%M')
+            return col_date <= today and col_date >= latest
+        else:
+            return True
+
+    def on_last_clicked(self, widget):
+        if self.show_latest == True:
+            self.show_latest = False
+            self.last.set_property("tooltip-text", "Last 7 days")
+        else:
+            self.show_latest = True
+            self.last.set_property("tooltip-text", "Show all days")
+        self.last_filter.refilter()
 
 style_provider = Gtk.CssProvider()
 style_provider.load_from_data(bytes(stylesheet.encode()))

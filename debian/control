@@ -10,6 +10,6 @@ Standards-Version: 3.9.3
 
 Package: com.github.mirkobrombin.football
 Architecture: any
-Depends: python3, python-requests, ${misc:Depends}, ${shlibs:Depends}
+Depends: python3, python-requests, ${misc:Depends}
 Description: Football
  An application for tracking Football scores, designed for elementary OS.

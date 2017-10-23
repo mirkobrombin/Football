@@ -1,5 +1,5 @@
-com.github.mirkobrombin.football (1.0.6) precise; urgency=low
+com.github.mirkobrombin.football (1.0.7) precise; urgency=low
 
-  * Changed appdata description
+  * Added "last 7 days" filter
 
- -- Mirko Brombin <mbrombin@mbrombin-pc>  Sun, 27 Sep 2017 19:51:07 +0200
+ -- Mirko Brombin <mbrombin@mbrombin-pc>  Sun, 23 Oct 2017 11:20:00 +0200
