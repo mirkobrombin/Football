@@ -1,9 +1,0 @@
-football /usr/local/bin/
-football /usr/share/com.github.mirkobrombin.football/football
-setup.py /usr/share/com.github.mirkobrombin.football
-com.github.mirkobrombin.football /usr/local/bin
-com.github.mirkobrombin.football /usr/share/com.github.mirkobrombin.football
-data /usr/share/com.github.mirkobrombin.football
-data/com.github.mirkobrombin.football.svg /usr/local/share/icons/hicolor/128x128/apps
-data/com.github.mirkobrombin.football.desktop /usr/local/share/applications
-

@@ -24,10 +24,7 @@ import sys
 launch_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 # Update sys.path to include modules
-if launch_dir == "/usr/bin":
-    modules_path = "/usr/share/com.github.mirkobrombin.football/football"
-else:
-    modules_path = launch_dir + "/football"
+modules_path = "/usr/share/com.github.mirkobrombin.football/football"
 
 sys.path.insert(0, modules_path)
 
