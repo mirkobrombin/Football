@@ -120,7 +120,7 @@ class Football(Gtk.Window):
             elif f['status'] == "TIMED":
                 match_status = "Timed"
             elif f['status'] == "SCHEDULED":
-                match_status = "Programmed"
+                match_status = "Scheduled"
             try:
                 self.fixtures_list.append((
                     f['homeTeamName'], 
@@ -142,7 +142,7 @@ class Football(Gtk.Window):
         self.fixtures_sorted = Gtk.TreeModelSort(model=self.fixtures_liststore)
         self.fixtures_sorted.set_sort_column_id(1, Gtk.SortType.ASCENDING)
         self.treeview = Gtk.TreeView.new_with_model(self.last_filter)
-        for i, column_title in enumerate(["Home team", "Day", "Results", "Away team", "Status", "Date"]):
+        for i, column_title in enumerate(["Home team", "Day", "Score", "Away team", "Status", "Date"]):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, renderer, text=i)
             column.set_reorderable(True)
