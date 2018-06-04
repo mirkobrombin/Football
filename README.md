@@ -1,33 +1,14 @@
 # Football
-An application for tracking Football scores, designed for elementary OS.
-![Screenshot](screenshot.png)
+![](https://i.imgur.com/eddMtP5.png)
 
-## Requirements
-- python3
-- libgtk-3-dev
+Sorry, I moved the project to GitLab because of the Microsoft's acquisition of GitHub.
 
-## How to run
-```bash
-com.github.mirkobrombin.football
-```
+## New location
+https://gitlab.com/brombinmirko/Football
 
-## Installation
+![Moved to GitLab](https://i.imgur.com/wGgvnPq.png)
 
-### For elementary OS
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.mirkobrombin.football)
-
-### For Debian based
-Grab an updated debian package [here](https://github.com/mirkobrombin/Football/releases)
-
-```bash
-dpkg -i com.github.mirkobrombin.football*.deb
-```
-
-### Install from source
-Grab an updated release [here](https://github.com/mirkobrombin/Football/archive/master.zip) or use **git**:
-
-```bash
-git clone https://github.com/mirkobrombin/Football.git
-cd Football
-sudo python3 setup.py install
-```
+## More info for Microsoft+GitHub?
+- https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/
+- https://blog.github.com/2018-06-04-github-microsoft/
+- Italians only: https://linuxhub.it/pausacaffe-lopen-source-non-e-in-vendita/
