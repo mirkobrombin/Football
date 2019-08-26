@@ -3,9 +3,9 @@
 import glob, os 
 from distutils.core import setup
 
-install_data = [('share/applications', ['data/com.github.brombinmirko.football.desktop']),
-                ('share/metainfo', ['data/com.github.brombinmirko.football.appdata.xml']),
-                ('share/icons/hicolor/128x128/apps',['data/com.github.brombinmirko.football.svg']),
+install_data = [('share/applications', ['data/com.github.mirkobrombin.football.desktop']),
+                ('share/metainfo', ['data/com.github.mirkobrombin.football.appdata.xml']),
+                ('share/icons/hicolor/128x128/apps',['data/com.github.mirkobrombin.football.svg']),
                 ('bin/football',['football/main.py']),
                 ('bin/football',['football/__init__.py'])]
 
@@ -16,6 +16,6 @@ setup(  name='Football',
         description='Track Football scores',
         url='https://github.com/brombinmirko/football',
         license='GNU GPL3',
-        scripts=['com.github.brombinmirko.football'],
+        scripts=['com.github.mirkobrombin.football'],
         packages=['football'],
         data_files=install_data)

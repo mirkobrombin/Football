@@ -1,6 +1,6 @@
 #! /usr/bin/make -f
 
-export PYBUILD_INSTALL_ARGS ?= --install-lib=/usr/share/com.github.brombinmirko.football
+export PYBUILD_INSTALL_ARGS ?= --install-lib=/usr/share/com.github.mirkobrombin.football
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild

@@ -26,19 +26,19 @@
 
 ## How to run
 ```bash
-com.github.brombinmirko.football
+com.github.mirkobrombin.football
 ```
 
 ## Installation
 
 ### For elementary OS
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.brombinmirko.football)
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.mirkobrombin.football)
 
 ### For Debian based
 Grab an updated debian package [here](https://github.com/brombinmirko/Football/releases)
 
 ```bash
-dpkg -i com.github.brombinmirko.football*.deb
+dpkg -i com.github.mirkobrombin.football*.deb
 ```
 
 ### Install from source

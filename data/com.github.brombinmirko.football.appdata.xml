@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2017 Allen B -->
 <component type="desktop">
-  <id>com.github.brombinmirko.football</id>
+  <id>com.github.mirkobrombin.football</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Football</name>

@@ -1,4 +1,4 @@
-Source: com.github.brombinmirko.football
+Source: com.github.mirkobrombin.football
 Section: x11
 Priority: extra
 Maintainer: Mirko Brombin <send@mirko.pm>
@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 10),
 Standards-Version: 3.9.3
 
 X-Python-Version: >= 3.6.8
-Package: com.github.brombinmirko.football
+Package: com.github.mirkobrombin.football
 Architecture: any
 Depends: python3, python-requests, ${misc:Depends}
 Description: Football
