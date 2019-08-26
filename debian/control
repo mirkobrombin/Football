@@ -4,8 +4,9 @@ Priority: extra
 Maintainer: Mirko Brombin <send@mirko.pm>
 Build-Depends: debhelper (>= 10),
                dh-python,
+               python3,
                python-all,
-               python-setuptools  
+               python-setuptools
 Standards-Version: 3.9.3
 
 X-Python-Version: >= 3.6.8
