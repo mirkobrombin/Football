@@ -2,18 +2,16 @@ Source: com.github.mirkobrombin.football
 Section: x11
 Priority: extra
 Maintainer: Mirko Brombin <send@mirko.pm>
-Build-Depends: debhelper (>= 11),
+Build-Depends: debhelper (>= 10),
+               libgtk-3-dev,
+               libgranite-dev,
                dh-python,
-               python-all,
-               python,
-               python-setuptools,
+               python3-all,
+               python3-setuptools
 Standards-Version: 3.9.3
 
 Package: com.github.mirkobrombin.football
 Architecture: any
-Depends: gir1.2-glib-2.0,
-         gir1.2-gtk-3.0,
-         python,
-         python-requests
+Depends: python3, ${misc:Depends}
 Description: Football
  An application for tracking Football scores, designed for elementary OS.
