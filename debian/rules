@@ -3,4 +3,4 @@
 export PYBUILD_INSTALL_ARGS ?= --install-lib=/usr/share/com.github.mirkobrombin.football
 
 %:
-	dh $@ --with python3 --buildsystem=pybuild
+	dh $@ --with python2 --buildsystem=pybuild
