@@ -1,0 +1,10 @@
+Package: com.github.brombinmirko.football
+Version: 1.0.9
+Architecture: amd64
+Maintainer: Mirko Brombin <send@mirko.pm>
+Installed-Size: 65
+Depends: python3, python-requests
+Section: x11
+Priority: extra
+Description: Football
+ An application for tracking Football scores, designed for elementary OS.
