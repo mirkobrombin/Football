@@ -2,8 +2,9 @@ Source: com.github.mirkobrombin.football
 Section: x11
 Priority: extra
 Maintainer: Mirko Brombin <send@mirko.pm>
-Build-Depends: debhelper (>= 9), python3
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 10.5.1),
+               python3
+Standards-Version: 4.1.1
 X-Python3-Version: >= 3.2
 Homepage: https://github.com/mirkobrombin/football
 Vcs-Git: https://github.com/mirkobrombin/football.git
