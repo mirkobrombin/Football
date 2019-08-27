@@ -1,6 +1,7 @@
 #! /usr/bin/make -f
 
-export PYBUILD_INSTALL_ARGS ?= --install-lib=/usr/share/com.github.mirkobrombin.football
+export PYBUILD_NAME=bottles
+export PYBUILD_INSTALL_ARGS ?= --install-lib=/usr/share/com.github.aboudzakaria.stickies
 
 %:
-	dh $@ --buildsystem=pybuild
+	dh $@ --with python3 --buildsystem=pybuild
