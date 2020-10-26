@@ -1,5 +1,5 @@
-com.github.mirkobrombin.football (1.1.8) precise; urgency=low
+com.github.mirkobrombin.football (1.1.9) precise; urgency=low
 
-  * API unlocked. Last update for this version. We are developing a new version from scratch.
+  * Fix build for elementary OS Hera. Last update (again) for this version. We are developing a new version from scratch.
 
- -- Mirko Brombin <send@mirko.pm>  Mon, 27 Aug 2019 14:02:00 +0200
+ -- Mirko Brombin <send@mirko.pm>  Mon, 26 Oct 2020 15:17:00 +0200

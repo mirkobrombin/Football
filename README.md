@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://i.imgur.com/xqfciv5.png" width="64">
   <h1 align="center">Football</h1>
-  <b>This application has reached the end of development for its first version. We are developing a new application from scratch that will soon be available in the AppCenter.</b>
+  <b>This application will receive only bugfix from now. I'm developing a new version from scratch.</b>
   <div align="center">An application for tracking Football scores, designed for elementary OS.</div>
 </div>
 
