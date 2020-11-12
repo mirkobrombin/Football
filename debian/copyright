@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
 Upstream-Name: Football
-Source: https://github.com/brombinmirko/football
+Source: https://git.mirko.pm/brombinmirko/football
 
 Files: *
 Copyright: 2017 Mirko Brombin <send@mirko.pm>

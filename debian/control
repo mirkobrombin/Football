@@ -7,9 +7,9 @@ Build-Depends: debhelper (>= 10),
                python3
 X-Python3-Version: >= 3.6.9
 Standards-Version: 3.9.3
-Homepage: https://github.com/mirkobrombin/football
-Vcs-Git: https://github.com/mirkobrombin/football.git
-Vcs-Browser: https://github.com/mirkobrombin/football
+Homepage: https://git.mirko.pm/brombinmirko/football
+Vcs-Git: https://git.mirko.pm/brombinmirko/football.git
+Vcs-Browser: https://git.mirko.pm/brombinmirko/football
 
 Package: com.github.mirkobrombin.football
 Architecture: any

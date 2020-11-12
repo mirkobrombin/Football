@@ -1,3 +1,10 @@
+com.github.mirkobrombin.football (1.2.1) precise; urgency=low
+
+  * Fix for API limits
+  * Show API limits warnings in dialog
+
+ -- Mirko Brombin <send@mirko.pm>  Mon, 12 Nov 2020 21:18:00 +0200
+
 com.github.mirkobrombin.football (1.1.9) precise; urgency=low
 
   * Fix build for elementary OS Hera. Last update (again) for this version. We are developing a new version from scratch.
