@@ -18,4 +18,12 @@
 #    You should have received a copy of the GNU General Public License
 #    along with Football.  If not, see <http://www.gnu.org/licenses/>.
 
-python3 /usr/share/com.github.mirkobrombin.football/football/main.py
+import os
+import sys
+
+# Update sys.path to include modules
+modules_path = "/usr/share/com.github.mirkobrombin.football/football"
+
+sys.path.insert(0, modules_path)
+
+import main
