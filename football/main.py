@@ -57,7 +57,7 @@ class FootballDialog(Gtk.Dialog):
         content = self.get_content_area()
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
         box.set_border_width(20)
-        box.add(label), box.add(message_scroll)
+        box.add(dialog_label), box.add(message_scroll)
         
         content.add(box)
         self.show_all()
