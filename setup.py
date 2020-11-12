@@ -4,7 +4,7 @@ import glob, os
 from distutils.core import setup
 
 share_path = '/usr/share'
-inst_path = share_path+'/com.github.mirkobrombin.bottles/bottles'
+inst_path = share_path+'/com.github.mirkobrombin.football/football'
 icons_path = share_path+'/icons/hicolor/scalable/apps'
 
 install_data = [(share_path+'/metainfo', ['data/com.github.mirkobrombin.football.appdata.xml']),
