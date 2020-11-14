@@ -14,7 +14,7 @@ install_data = [(share_path+'/metainfo', ['data/com.github.mirkobrombin.football
                 (inst_path,['football/__init__.py'])]
 
 setup(  name='Football',
-        version='1.2.3',
+        version='1.2.5',
         python_requires='>3.5.2',
         author='Mirko Brombin',
         description='Track Football scores',
