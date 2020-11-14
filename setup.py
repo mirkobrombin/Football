@@ -10,7 +10,7 @@ icons_path = share_path+'/icons/hicolor/scalable/apps'
 install_data = [(share_path+'/metainfo', ['data/com.github.mirkobrombin.football.appdata.xml']),
                 (share_path+'/applications', ['data/com.github.mirkobrombin.football.desktop']),
                 (icons_path,['data/com.github.mirkobrombin.football.svg']),
-                (inst_path,['football/wine.py']),
+                (inst_path,['football/main.py']),
                 (inst_path,['football/__init__.py'])]
 
 setup(  name='Football',
